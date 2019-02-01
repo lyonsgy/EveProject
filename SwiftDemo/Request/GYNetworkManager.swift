@@ -161,7 +161,7 @@ func NetWorkRequest<T: HandyJSON>(_ target: GYApi,model: T.Type, completion: @es
                 SVProgressHUD.showError(withStatus:error.errorMsg)
                 return
             }
-            guard let returnData = try? result.value?.mapModel(ResponseData<T>.self) else {
+            guard let returnData = try? result.value?.mapModel(GYResponseData<T>.self) else {
                 completion(T())
                 return
             }
@@ -200,7 +200,7 @@ func NetWorkRequest<T: HandyJSON>(_ target: GYApi,model: T.Type, completion: @es
                 failed!(error)
                 return
             }
-            guard let returnData = try? result.value?.mapModel(ResponseData<T>.self) else {
+            guard let returnData = try? result.value?.mapModel(GYResponseData<T>.self) else {
                 completion(T())
                 return
             }
@@ -240,7 +240,7 @@ func NetWorkRequest<T: HandyJSON>(_ target: GYApi, model: T.Type, completion: @e
                 failed!(error)
                 return
             }
-            guard let returnData = try? result.value?.mapModel(ResponseData<T>.self) else {
+            guard let returnData = try? result.value?.mapModel(GYResponseData<T>.self) else {
                 completion(T())
                 return
             }

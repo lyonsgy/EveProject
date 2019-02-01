@@ -25,7 +25,7 @@ class GYList: HandyJSON {
 extension Array: HandyJSON{}
 
 //成功后返回的数据模型
-struct  GYResponseData<T: HandyJSON>: HandyJSON {
+struct GYResponseData<T: HandyJSON>: HandyJSON {
     var success: Int = 0
     var message:String?
     var data: T?

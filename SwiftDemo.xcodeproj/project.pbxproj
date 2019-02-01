@@ -25,6 +25,8 @@
 		2B3271A02202EBC90092C9F7 /* GYHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B32719E2202EBC90092C9F7 /* GYHomeViewController.xib */; };
 		2B3271A32202EBD60092C9F7 /* GYMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3271A12202EBD60092C9F7 /* GYMineViewController.swift */; };
 		2B3271A42202EBD60092C9F7 /* GYMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3271A22202EBD60092C9F7 /* GYMineViewController.xib */; };
+		2B712E472204216500D2ACC7 /* GYCommonFuction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B712E462204216500D2ACC7 /* GYCommonFuction.swift */; };
+		2B712E4922042C5B00D2ACC7 /* GYViewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B712E4822042C5B00D2ACC7 /* GYViewLayer.swift */; };
 		F91F780103C18FFBFC431C1F /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CAFC3AA607736DE530FC962 /* Pods_SwiftDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		2B32719E2202EBC90092C9F7 /* GYHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GYHomeViewController.xib; sourceTree = "<group>"; };
 		2B3271A12202EBD60092C9F7 /* GYMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMineViewController.swift; sourceTree = "<group>"; };
 		2B3271A22202EBD60092C9F7 /* GYMineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GYMineViewController.xib; sourceTree = "<group>"; };
+		2B712E462204216500D2ACC7 /* GYCommonFuction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYCommonFuction.swift; sourceTree = "<group>"; };
+		2B712E4822042C5B00D2ACC7 /* GYViewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYViewLayer.swift; sourceTree = "<group>"; };
 		2CAFC3AA607736DE530FC962 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9400E218B6C836FCF9763185 /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,14 +139,14 @@
 			isa = PBXGroup;
 			children = (
 				2B3271592202E6120092C9F7 /* Assets.xcassets */,
-				2B32715B2202E6120092C9F7 /* LaunchScreen.storyboard */,
 				2B32715E2202E6120092C9F7 /* Info.plist */,
 				2B3271522202E6100092C9F7 /* AppDelegate.swift */,
+				2B32715B2202E6120092C9F7 /* LaunchScreen.storyboard */,
 				2B3271802202EB300092C9F7 /* Config */,
 				2B3271832202EB300092C9F7 /* Root */,
 				2B3271882202EB300092C9F7 /* Helper */,
-				2B3271892202EB300092C9F7 /* Request */,
 				2B32718C2202EB300092C9F7 /* Model */,
+				2B3271892202EB300092C9F7 /* Request */,
 				2B32718E2202EB300092C9F7 /* View */,
 				2B3271912202EB300092C9F7 /* Controllers */,
 			);
@@ -189,6 +193,7 @@
 		2B3271882202EB300092C9F7 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				2B712E45220420FB00D2ACC7 /* CommonFuction */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -251,6 +256,15 @@
 				2B3271A22202EBD60092C9F7 /* GYMineViewController.xib */,
 			);
 			path = Mine;
+			sourceTree = "<group>";
+		};
+		2B712E45220420FB00D2ACC7 /* CommonFuction */ = {
+			isa = PBXGroup;
+			children = (
+				2B712E462204216500D2ACC7 /* GYCommonFuction.swift */,
+				2B712E4822042C5B00D2ACC7 /* GYViewLayer.swift */,
+			);
+			path = CommonFuction;
 			sourceTree = "<group>";
 		};
 		D37A823CBAE463CF3C6C6A89 /* Pods */ = {
@@ -451,10 +465,12 @@
 				2B3271992202EB300092C9F7 /* GYModel.swift in Sources */,
 				2B3271962202EB300092C9F7 /* GYRootNavigationController.swift in Sources */,
 				2B32719A2202EB300092C9F7 /* URefresh.swift in Sources */,
+				2B712E4922042C5B00D2ACC7 /* GYViewLayer.swift in Sources */,
 				2B32719F2202EBC90092C9F7 /* GYHomeViewController.swift in Sources */,
 				2B3271A32202EBD60092C9F7 /* GYMineViewController.swift in Sources */,
 				2B3271532202E6100092C9F7 /* AppDelegate.swift in Sources */,
 				2B3271922202EB300092C9F7 /* GYMoyaConfig.swift in Sources */,
+				2B712E472204216500D2ACC7 /* GYCommonFuction.swift in Sources */,
 				2B3271932202EB300092C9F7 /* Const.swift in Sources */,
 				2B3271952202EB300092C9F7 /* GYRootViewController.swift in Sources */,
 				2B3271942202EB300092C9F7 /* GYRootTabBarController.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  GYNetWorkManager.swift
+//  GYNetWorkTool.swift
 //  EveProject
 //
 //  Created by lyons on 2019/1/31.
@@ -13,11 +13,11 @@ import HandyJSON
 import SVProgressHUD
 
 /// 超时时长
-private var requestTimeOut:Double = Double(Moya_timeout)
+private var requestTimeOut:Double = 30
 ///成功数据的回调
 typealias successCallback<T: HandyJSON> = ((T?) -> (Void))
 ///失败的回调
-typealias failedCallback = ((GYError) -> (Void))
+typealias failedCallback = ((GYError?) -> (Void))
 ///网络错误的回调
 typealias errorCallback = (() -> (Void))
 
@@ -142,7 +142,35 @@ let Provider = MoyaProvider<GYApi>(endpointClosure: myEndpointClosure, requestCl
 ///   - target: 网络请求
 ///   - completion: 请求成功的回调
 func NetWorkRequest<T: HandyJSON>(_ target: GYApi,model: T.Type, completion: @escaping successCallback<T> ){
-    NetWorkRequest(target, model: model, completion: completion, failed: nil, errorResult: nil)
+    //先判断网络是否有链接 没有的话直接返回--代码略
+    if !isNetworkConnect{
+        print("提示用户网络似乎出现了问题")
+        return
+    }
+    //这里显示loading图
+    SVProgressHUD.show()
+    Provider.request(target) { (result) in
+        //隐藏hud
+        SVProgressHUD.dismiss()
+        switch result {
+        case let .success(response):
+            //这里的completion和failed判断条件依据不同项目来做
+            guard response.statusCode == 200  else {
+                let errorStr = String(data: response.data, encoding: .utf8)
+                let error = JSONDeserializer<GYError>.deserializeFrom(json: errorStr) ?? GYError()
+                SVProgressHUD.showError(withStatus:error.errorMsg)
+                return
+            }
+            guard let returnData = try? result.value?.mapModel(ResponseData<T>.self) else {
+                completion(T())
+                return
+            }
+            completion(returnData?.data)
+        case let .failure(error):
+            print("网络连接失败:\(error)")
+            SVProgressHUD.showError(withStatus:"网络连接失败:\(error)")
+        }
+    }
 }
 
 
@@ -153,7 +181,35 @@ func NetWorkRequest<T: HandyJSON>(_ target: GYApi,model: T.Type, completion: @es
 ///   - completion: 成功的回调
 ///   - failed: 请求失败的回调
 func NetWorkRequest<T: HandyJSON>(_ target: GYApi,model: T.Type, completion: @escaping successCallback<T> , failed:failedCallback?) {
-    NetWorkRequest(target, model: model, completion: completion, failed: failed, errorResult: nil)
+    //先判断网络是否有链接 没有的话直接返回--代码略
+    if !isNetworkConnect{
+        print("提示用户网络似乎出现了问题")
+        return
+    }
+    //这里显示loading图
+    SVProgressHUD.show()
+    Provider.request(target) { (result) in
+        //隐藏hud
+        SVProgressHUD.dismiss()
+        switch result {
+        case let .success(response):
+            //这里的completion和failed判断条件依据不同项目来做
+            guard response.statusCode == 200  else {
+                let errorStr = String(data: response.data, encoding: .utf8)
+                let error = JSONDeserializer<GYError>.deserializeFrom(json: errorStr) ?? GYError()
+                failed!(error)
+                return
+            }
+            guard let returnData = try? result.value?.mapModel(ResponseData<T>.self) else {
+                completion(T())
+                return
+            }
+            completion(returnData?.data)
+        case let .failure(error):
+            print("网络连接失败:\(error)")
+            SVProgressHUD.showError(withStatus:"网络连接失败:\(error)")
+        }
+    }
 }
 
 
@@ -184,7 +240,7 @@ func NetWorkRequest<T: HandyJSON>(_ target: GYApi, model: T.Type, completion: @e
                 failed!(error)
                 return
             }
-            guard let returnData = try? result.value?.mapModel(GYResponseData<T>.self) else {
+            guard let returnData = try? result.value?.mapModel(ResponseData<T>.self) else {
                 completion(T())
                 return
             }

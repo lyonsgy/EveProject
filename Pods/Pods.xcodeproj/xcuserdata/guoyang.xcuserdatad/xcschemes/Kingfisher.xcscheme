@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "46F960D6F4D1364D9AC46EA5C3156681"
-               BuildableName = "Result.framework"
-               BlueprintName = "Result"
+               BlueprintIdentifier = "4F87037150ABE2C9238B54E8F6E33F36"
+               BuildableName = "Kingfisher.framework"
+               BlueprintName = "Kingfisher"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "46F960D6F4D1364D9AC46EA5C3156681"
-            BuildableName = "Result.framework"
-            BlueprintName = "Result"
+            BlueprintIdentifier = "4F87037150ABE2C9238B54E8F6E33F36"
+            BuildableName = "Kingfisher.framework"
+            BlueprintName = "Kingfisher"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

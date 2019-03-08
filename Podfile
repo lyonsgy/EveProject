@@ -5,10 +5,11 @@ use_frameworks!
 def pods
     #必要库
     pod 'Moya'
-    pod 'HandyJSON', '~> 4.2.0'
     pod 'SVProgressHUD'
     pod 'MJRefresh'
     pod 'SnapKit'
+    pod 'Kingfisher'
+    pod 'HandyJSON', '~> 4.2.0'
 end
 
 target 'SwiftDemo' do

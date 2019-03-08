@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /// 手机号校验
 ///
@@ -28,3 +29,23 @@ func isTelNumber(num:NSString)->Bool{
     }
 }
 
+extension String{
+    
+    /// string转viewController
+    ///
+    /// - Returns: ViewController
+    func stringChangeToVC() -> UIViewController?{
+        //Swift中命名空间的概念
+        var vc = UIViewController()
+        if let nameSpage = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String {
+            if let childVcClass = NSClassFromString(nameSpage + "." + self) {
+                if let childVcType = childVcClass as? UIViewController.Type {
+                    //根据类型创建对应的对象
+                    vc = childVcType.init() as UIViewController
+                    return vc
+                }
+            }
+        }
+        return nil
+    }
+}

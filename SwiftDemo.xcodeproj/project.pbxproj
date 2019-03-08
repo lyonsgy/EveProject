@@ -25,8 +25,12 @@
 		2B3271A02202EBC90092C9F7 /* GYHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B32719E2202EBC90092C9F7 /* GYHomeViewController.xib */; };
 		2B3271A32202EBD60092C9F7 /* GYMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3271A12202EBD60092C9F7 /* GYMineViewController.swift */; };
 		2B3271A42202EBD60092C9F7 /* GYMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3271A22202EBD60092C9F7 /* GYMineViewController.xib */; };
+		2B37A327223109B30074626A /* GYGaussianBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B37A326223109B30074626A /* GYGaussianBlur.swift */; };
+		2B3BCE3C223248D70009FF70 /* GYGaussianBlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BCE3A223248D70009FF70 /* GYGaussianBlurViewController.swift */; };
+		2B3BCE3D223248D70009FF70 /* GYGaussianBlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3BCE3B223248D70009FF70 /* GYGaussianBlurViewController.xib */; };
 		2B712E472204216500D2ACC7 /* GYCommonFuction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B712E462204216500D2ACC7 /* GYCommonFuction.swift */; };
 		2B712E4922042C5B00D2ACC7 /* GYViewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B712E4822042C5B00D2ACC7 /* GYViewLayer.swift */; };
+		2B79D86622111CF0002FC0D3 /* demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B79D86522111CF0002FC0D3 /* demo.swift */; };
 		F91F780103C18FFBFC431C1F /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CAFC3AA607736DE530FC962 /* Pods_SwiftDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,8 +77,12 @@
 		2B32719E2202EBC90092C9F7 /* GYHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GYHomeViewController.xib; sourceTree = "<group>"; };
 		2B3271A12202EBD60092C9F7 /* GYMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMineViewController.swift; sourceTree = "<group>"; };
 		2B3271A22202EBD60092C9F7 /* GYMineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GYMineViewController.xib; sourceTree = "<group>"; };
+		2B37A326223109B30074626A /* GYGaussianBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYGaussianBlur.swift; sourceTree = "<group>"; };
+		2B3BCE3A223248D70009FF70 /* GYGaussianBlurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYGaussianBlurViewController.swift; sourceTree = "<group>"; };
+		2B3BCE3B223248D70009FF70 /* GYGaussianBlurViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GYGaussianBlurViewController.xib; sourceTree = "<group>"; };
 		2B712E462204216500D2ACC7 /* GYCommonFuction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYCommonFuction.swift; sourceTree = "<group>"; };
 		2B712E4822042C5B00D2ACC7 /* GYViewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYViewLayer.swift; sourceTree = "<group>"; };
+		2B79D86522111CF0002FC0D3 /* demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demo.swift; sourceTree = "<group>"; };
 		2CAFC3AA607736DE530FC962 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9400E218B6C836FCF9763185 /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +149,7 @@
 				2B3271592202E6120092C9F7 /* Assets.xcassets */,
 				2B32715E2202E6120092C9F7 /* Info.plist */,
 				2B3271522202E6100092C9F7 /* AppDelegate.swift */,
+				2B79D86522111CF0002FC0D3 /* demo.swift */,
 				2B32715B2202E6120092C9F7 /* LaunchScreen.storyboard */,
 				2B3271802202EB300092C9F7 /* Config */,
 				2B3271832202EB300092C9F7 /* Root */,
@@ -193,6 +202,7 @@
 		2B3271882202EB300092C9F7 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				2B3BCE38223242AA0009FF70 /* GYGaussianBlur */,
 				2B712E45220420FB00D2ACC7 /* CommonFuction */,
 			);
 			path = Helper;
@@ -236,6 +246,7 @@
 			children = (
 				2B32719B2202EB8E0092C9F7 /* Home */,
 				2B32719C2202EB930092C9F7 /* Mine */,
+				2B3BCE39223248850009FF70 /* GaussianBlur */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -256,6 +267,23 @@
 				2B3271A22202EBD60092C9F7 /* GYMineViewController.xib */,
 			);
 			path = Mine;
+			sourceTree = "<group>";
+		};
+		2B3BCE38223242AA0009FF70 /* GYGaussianBlur */ = {
+			isa = PBXGroup;
+			children = (
+				2B37A326223109B30074626A /* GYGaussianBlur.swift */,
+			);
+			path = GYGaussianBlur;
+			sourceTree = "<group>";
+		};
+		2B3BCE39223248850009FF70 /* GaussianBlur */ = {
+			isa = PBXGroup;
+			children = (
+				2B3BCE3A223248D70009FF70 /* GYGaussianBlurViewController.swift */,
+				2B3BCE3B223248D70009FF70 /* GYGaussianBlurViewController.xib */,
+			);
+			path = GaussianBlur;
 			sourceTree = "<group>";
 		};
 		2B712E45220420FB00D2ACC7 /* CommonFuction */ = {
@@ -383,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B32715D2202E6120092C9F7 /* LaunchScreen.storyboard in Resources */,
+				2B3BCE3D223248D70009FF70 /* GYGaussianBlurViewController.xib in Resources */,
 				2B3271A42202EBD60092C9F7 /* GYMineViewController.xib in Resources */,
 				2B3271A02202EBC90092C9F7 /* GYHomeViewController.xib in Resources */,
 				2B32715A2202E6120092C9F7 /* Assets.xcassets in Resources */,
@@ -433,6 +462,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -443,6 +473,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -468,13 +499,16 @@
 				2B712E4922042C5B00D2ACC7 /* GYViewLayer.swift in Sources */,
 				2B32719F2202EBC90092C9F7 /* GYHomeViewController.swift in Sources */,
 				2B3271A32202EBD60092C9F7 /* GYMineViewController.swift in Sources */,
+				2B3BCE3C223248D70009FF70 /* GYGaussianBlurViewController.swift in Sources */,
 				2B3271532202E6100092C9F7 /* AppDelegate.swift in Sources */,
+				2B79D86622111CF0002FC0D3 /* demo.swift in Sources */,
 				2B3271922202EB300092C9F7 /* GYMoyaConfig.swift in Sources */,
 				2B712E472204216500D2ACC7 /* GYCommonFuction.swift in Sources */,
 				2B3271932202EB300092C9F7 /* Const.swift in Sources */,
 				2B3271952202EB300092C9F7 /* GYRootViewController.swift in Sources */,
 				2B3271942202EB300092C9F7 /* GYRootTabBarController.swift in Sources */,
 				2B3271972202EB300092C9F7 /* GYNetworkManager.swift in Sources */,
+				2B37A327223109B30074626A /* GYGaussianBlur.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

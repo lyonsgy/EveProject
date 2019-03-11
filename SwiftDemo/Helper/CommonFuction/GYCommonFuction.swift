@@ -65,3 +65,26 @@ extension String{
         return nil
     }
 }
+
+extension UIImage {
+    /// 根据颜色生成图片
+    ///
+    /// - Parameter color: 颜色
+    /// - Returns: 生成图片
+    static func imageWithColor(color: UIColor) -> UIImage {
+        let rect  = CGRect(x: 0, y: 0, width: 1.0, height: 1.0)
+        // 开启位图上下文
+        UIGraphicsBeginImageContext(rect.size)
+        // 开启上下文
+        let ref = UIGraphicsGetCurrentContext()!
+        // 使用color演示填充上下文
+        ref.setFillColor(color.cgColor)
+        // 渲染上下文
+        ref.fill(rect)
+        // 从上下文中获取图片
+        let image:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        // 结束上下文
+        UIGraphicsEndImageContext()
+        return image
+    }
+}

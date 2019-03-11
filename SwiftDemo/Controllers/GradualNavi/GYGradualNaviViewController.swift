@@ -18,9 +18,6 @@ class GYGradualNaviViewController: GYRootViewController {
         setNavigation()
         setCustomVeiw()
     }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-    }
     deinit {
         //
     }

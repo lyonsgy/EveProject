@@ -44,15 +44,6 @@ class GYGradualView: UIView{
     }
 }
 extension GYGradualView {
-    /// 上端坐标
-    var cellID: CGFloat {
-        get {
-            return self.cellID
-        }
-        set(newValue) {
-            layoutSubviews()
-        }
-    }
     func setupSubviews() {
         tableView = UITableView.init()
         if #available(iOS 11, *) {
@@ -117,7 +108,7 @@ extension GYGradualView {
         if (imgH < statusAndNaviH) {
             imgH = statusAndNaviH
         }
-        print(tableView.contentOffset.y)
+//        print(tableView.contentOffset.y)
         
         let w = imgH*GYScreenWidth/headHeight
         
@@ -157,7 +148,6 @@ extension GYGradualView {
         //        let alphaImage = UIImage.imageWithColor(color: alphaColor)
         //修改导航条背景图片
         //        navigationController?.navigationBar.setBackgroundImage(alphaImage, for: UIBarMetrics.default)
-        
     }
     /// 获取父级ViewController
     ///

@@ -28,6 +28,8 @@
 		2B37A327223109B30074626A /* GYGaussianBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B37A326223109B30074626A /* GYGaussianBlur.swift */; };
 		2B3BCE3C223248D70009FF70 /* GYGaussianBlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BCE3A223248D70009FF70 /* GYGaussianBlurViewController.swift */; };
 		2B3BCE3D223248D70009FF70 /* GYGaussianBlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3BCE3B223248D70009FF70 /* GYGaussianBlurViewController.xib */; };
+		2B3BCE42223267710009FF70 /* GYGradualNaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BCE40223267710009FF70 /* GYGradualNaviViewController.swift */; };
+		2B3BCE43223267710009FF70 /* GYGradualNaviViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3BCE41223267710009FF70 /* GYGradualNaviViewController.xib */; };
 		2B712E472204216500D2ACC7 /* GYCommonFuction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B712E462204216500D2ACC7 /* GYCommonFuction.swift */; };
 		2B712E4922042C5B00D2ACC7 /* GYViewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B712E4822042C5B00D2ACC7 /* GYViewLayer.swift */; };
 		2B79D86622111CF0002FC0D3 /* demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B79D86522111CF0002FC0D3 /* demo.swift */; };
@@ -80,6 +82,8 @@
 		2B37A326223109B30074626A /* GYGaussianBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYGaussianBlur.swift; sourceTree = "<group>"; };
 		2B3BCE3A223248D70009FF70 /* GYGaussianBlurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYGaussianBlurViewController.swift; sourceTree = "<group>"; };
 		2B3BCE3B223248D70009FF70 /* GYGaussianBlurViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GYGaussianBlurViewController.xib; sourceTree = "<group>"; };
+		2B3BCE40223267710009FF70 /* GYGradualNaviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYGradualNaviViewController.swift; sourceTree = "<group>"; };
+		2B3BCE41223267710009FF70 /* GYGradualNaviViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GYGradualNaviViewController.xib; sourceTree = "<group>"; };
 		2B712E462204216500D2ACC7 /* GYCommonFuction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYCommonFuction.swift; sourceTree = "<group>"; };
 		2B712E4822042C5B00D2ACC7 /* GYViewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYViewLayer.swift; sourceTree = "<group>"; };
 		2B79D86522111CF0002FC0D3 /* demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demo.swift; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 				2B32719B2202EB8E0092C9F7 /* Home */,
 				2B32719C2202EB930092C9F7 /* Mine */,
 				2B3BCE39223248850009FF70 /* GaussianBlur */,
+				2B3BCE3F223267480009FF70 /* GradualNavi */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -286,6 +291,16 @@
 			path = GaussianBlur;
 			sourceTree = "<group>";
 		};
+		2B3BCE3F223267480009FF70 /* GradualNavi */ = {
+			isa = PBXGroup;
+			children = (
+				2B7E409822361072007321BB /* GYCustomTableView */,
+				2B3BCE40223267710009FF70 /* GYGradualNaviViewController.swift */,
+				2B3BCE41223267710009FF70 /* GYGradualNaviViewController.xib */,
+			);
+			path = GradualNavi;
+			sourceTree = "<group>";
+		};
 		2B712E45220420FB00D2ACC7 /* CommonFuction */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +308,13 @@
 				2B712E4822042C5B00D2ACC7 /* GYViewLayer.swift */,
 			);
 			path = CommonFuction;
+			sourceTree = "<group>";
+		};
+		2B7E409822361072007321BB /* GYCustomTableView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GYCustomTableView;
 			sourceTree = "<group>";
 		};
 		D37A823CBAE463CF3C6C6A89 /* Pods */ = {
@@ -413,6 +435,7 @@
 				2B32715D2202E6120092C9F7 /* LaunchScreen.storyboard in Resources */,
 				2B3BCE3D223248D70009FF70 /* GYGaussianBlurViewController.xib in Resources */,
 				2B3271A42202EBD60092C9F7 /* GYMineViewController.xib in Resources */,
+				2B3BCE43223267710009FF70 /* GYGradualNaviViewController.xib in Resources */,
 				2B3271A02202EBC90092C9F7 /* GYHomeViewController.xib in Resources */,
 				2B32715A2202E6120092C9F7 /* Assets.xcassets in Resources */,
 			);
@@ -503,6 +526,7 @@
 				2B3271532202E6100092C9F7 /* AppDelegate.swift in Sources */,
 				2B79D86622111CF0002FC0D3 /* demo.swift in Sources */,
 				2B3271922202EB300092C9F7 /* GYMoyaConfig.swift in Sources */,
+				2B3BCE42223267710009FF70 /* GYGradualNaviViewController.swift in Sources */,
 				2B712E472204216500D2ACC7 /* GYCommonFuction.swift in Sources */,
 				2B3271932202EB300092C9F7 /* Const.swift in Sources */,
 				2B3271952202EB300092C9F7 /* GYRootViewController.swift in Sources */,

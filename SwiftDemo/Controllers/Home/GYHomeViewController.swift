@@ -26,7 +26,7 @@ class GYHomeViewController: GYRootViewController {
         self.navigationItem.title = "首页"
         
         self.list = [item(title: "高斯模糊", className: "GYGaussianBlurViewController"),
-                     item(title: "渐变导航", className: "GYGaussianBlurViewController")]
+                     item(title: "渐变导航", className: "GYGradualNaviViewController")]
         
         // 2.设置数据源代理
         self.tableView.dataSource = self

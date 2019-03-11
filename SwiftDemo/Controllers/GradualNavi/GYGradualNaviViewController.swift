@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class GYGradualNaviViewController: UIViewController {
+class GYGradualNaviViewController: GYRootViewController {
     let cellID = "cell"
     var gradualView:GYGradualView!
     
@@ -18,6 +18,15 @@ class GYGradualNaviViewController: UIViewController {
         setNavigation()
         setCustomVeiw()
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    deinit {
+        //
+    }
+}
+
+extension GYGradualNaviViewController: UITableViewDataSource, UITableViewDelegate {
     func setNavigation() {
         // 设置导航栏的背景
         navigationController?.navigationBar.setBackgroundImage(UIImage.init(), for: UIBarMetrics.default)
@@ -34,8 +43,11 @@ class GYGradualNaviViewController: UIViewController {
     }
     func setCustomVeiw(){
         gradualView = GYGradualView.init()
+        gradualView.cellID = 10
         // 4.注册cell
-//        gradualView.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        gradualView.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        gradualView.tableView.delegate = self
+        gradualView.tableView.dataSource = self
         view.addSubview(gradualView)
         gradualView.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(0)
@@ -43,5 +55,14 @@ class GYGradualNaviViewController: UIViewController {
             make.left.equalToSuperview().offset(0)
             make.right.equalToSuperview().offset(0)
         }
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID)
+        cell?.textLabel?.text = "\(indexPath.row)"
+        return cell!
     }
 }

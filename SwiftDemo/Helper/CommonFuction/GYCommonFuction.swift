@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+let statusAndNaviH = UIApplication.shared.statusBarFrame.size.height + 44
+
 //获取导航栏+状态栏的高度
 extension UIViewController{
 //    func naviAndStatusHight() -> CGFloat {
@@ -17,11 +19,13 @@ extension UIViewController{
     /// 尺寸
     var statusBarH: CGFloat {
         get {
-            return navigationController!.navigationBar.frame.size.height+UIApplication.shared.statusBarFrame.size.height
+            let naviH = navigationController?.navigationBar.frame.size.height
+            let statusH = UIApplication.shared.statusBarFrame.size.height
+            return  ((naviH == nil) ? 0:naviH!) + statusH
         }
-//        set(newValue) {
-//            frame.size = CGSize(width: newValue.width, height: newValue.height)
-//        }
+        set(newValue) {
+
+        }
     }
 }
 

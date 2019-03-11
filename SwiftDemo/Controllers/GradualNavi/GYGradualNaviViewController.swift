@@ -9,10 +9,10 @@
 import UIKit
 import SnapKit
 
-class GYGradualNaviViewController: UIViewController {
+class GYGradualNaviViewController: UIViewController,UIScrollViewDelegate {
     
     /// headView高度
-    let headHeight:CGFloat = 200.0
+    var headHeight:CGFloat = 200.0
     /// sectionHeader高度
     let sectionHeaderHeight:CGFloat = 44.0
     let cellID = "cell"
@@ -44,12 +44,12 @@ class GYGradualNaviViewController: UIViewController {
         titleLabel.sizeToFit()
         // 开始的时候看不见，所以alpha值为0
         titleLabel.textColor = UIColor.init(white: 0, alpha: 0)
-        navigationItem.titleView = titleLabel;
+        navigationItem.titleView = titleLabel
     }
     func setCustomVeiw(){
         tableView = UITableView.init()
         let height = headHeight+sectionHeaderHeight
-        tableView.contentInset = UIEdgeInsets(top: height, left: 0, bottom: 0, right: 0);
+        tableView.contentInset = UIEdgeInsets(top: height, left: 0, bottom: 0, right: 0)
         tableView.setContentOffset(CGPoint.init(x: 0, y: -headHeight-sectionHeaderHeight), animated:false)
         // 2.设置数据源代理
         tableView.dataSource = self
@@ -96,26 +96,14 @@ class GYGradualNaviViewController: UIViewController {
             make.height.equalTo(sectionHeaderHeight)
         }
     }
-}
-
-extension GYGradualNaviViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 40
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID)
-        cell?.textLabel?.text = "\(indexPath.row)"
-        return cell!
-    }
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offset = scrollView.contentOffset.y + (headHeight + sectionHeaderHeight);
-        var imgH = headHeight - offset;
-        if (imgH < 64) {
-            imgH = 64;
+        let offset = scrollView.contentOffset.y + (headHeight + sectionHeaderHeight)
+        var imgH = headHeight - offset
+
+        if (imgH < statusBarH) {
+            imgH = statusBarH
         }
-//        print(scrollView.contentOffset.y)
+        //print(scrollView.contentOffset.y)
         
         let w = imgH*GYScreenWidth/headHeight
         
@@ -134,26 +122,38 @@ extension GYGradualNaviViewController: UITableViewDataSource, UITableViewDelegat
         }
         
         //根据透明度来生成图片
-        //找最大值/
+        //找最大值
         var alpha  = offset * 1 / 136.0   // (200 - 64) / 136.0f
         if (alpha >= 1) {
             alpha = 0.99
         }else if(alpha<0){
             alpha = 0
         }
-//        print(alpha)
+        //        print(alpha)
         bgImageView.setGaussianBlurImage(with: URL(string: "https://i7.wenshen520.com/c/42.jpg"), blurNumber:Float(alpha))
-
+        
         //拿到标题 标题文字的随着移动高度的变化而变化
-        let titleL = navigationItem.titleView as! UILabel;
+        let titleL = navigationItem.titleView as! UILabel
         titleL.textColor = UIColor.init(white: 1, alpha: alpha)
         
         //把颜色生成图片
-//        let alphaColor = UIColor.init(white: 1, alpha: alpha)
+        //        let alphaColor = UIColor.init(white: 1, alpha: alpha)
         //把颜色生成图片
-//        let alphaImage = UIImage.imageWithColor(color: alphaColor)
+        //        let alphaImage = UIImage.imageWithColor(color: alphaColor)
         //修改导航条背景图片
-//        navigationController?.navigationBar.setBackgroundImage(alphaImage, for: UIBarMetrics.default)
+        //        navigationController?.navigationBar.setBackgroundImage(alphaImage, for: UIBarMetrics.default)
+    }
+}
+
+extension GYGradualNaviViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID)
+        cell?.textLabel?.text = "\(indexPath.row)"
+        return cell!
     }
 }
 
@@ -169,10 +169,9 @@ extension UIImage {
         // 渲染上下文
         ref.fill(rect)
         // 从上下文中获取图片
-        let image:UIImage = UIGraphicsGetImageFromCurrentImageContext()!;
+        let image:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         // 结束上下文
-        UIGraphicsEndImageContext();
-        
+        UIGraphicsEndImageContext()
         return image
     }
 }

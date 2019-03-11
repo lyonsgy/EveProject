@@ -9,6 +9,22 @@
 import Foundation
 import UIKit
 
+//获取导航栏+状态栏的高度
+extension UIViewController{
+//    func naviAndStatusHight() -> CGFloat {
+//        return self.navigationController!.navigationBar.frame.size.height+UIApplication.shared.statusBarFrame.size.height
+//    }
+    /// 尺寸
+    var statusBarH: CGFloat {
+        get {
+            return navigationController!.navigationBar.frame.size.height+UIApplication.shared.statusBarFrame.size.height
+        }
+//        set(newValue) {
+//            frame.size = CGSize(width: newValue.width, height: newValue.height)
+//        }
+    }
+}
+
 /// 手机号校验
 ///
 /// - Parameter num: 手机号字符串

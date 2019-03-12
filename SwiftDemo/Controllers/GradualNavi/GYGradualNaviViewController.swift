@@ -18,9 +18,6 @@ class GYGradualNaviViewController: GYRootViewController {
         setNavigation()
         setCustomVeiw()
     }
-    deinit {
-        //
-    }
 }
 
 extension GYGradualNaviViewController: UITableViewDataSource, UITableViewDelegate {
@@ -40,7 +37,6 @@ extension GYGradualNaviViewController: UITableViewDataSource, UITableViewDelegat
     }
     func setCustomVeiw(){
         gradualView = GYGradualView.init()
-        gradualView.cellID = 10
         // 4.注册cell
         gradualView.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
         gradualView.tableView.delegate = self

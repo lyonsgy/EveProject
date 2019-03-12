@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B1CFF1A22375E8800B48618 /* GYRouterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1CFF1922375E8800B48618 /* GYRouterProvider.swift */; };
+		2B1CFF1C22375E9C00B48618 /* GYRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1CFF1B22375E9C00B48618 /* GYRouter.swift */; };
+		2B1CFF1E22375EBD00B48618 /* UIViewController+TopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1CFF1D22375EBD00B48618 /* UIViewController+TopVC.swift */; };
+		2B1CFF2022375FDD00B48618 /* GYRouterConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1CFF1F22375FDD00B48618 /* GYRouterConfig.swift */; };
 		2B3271532202E6100092C9F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3271522202E6100092C9F7 /* AppDelegate.swift */; };
 		2B32715A2202E6120092C9F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3271592202E6120092C9F7 /* Assets.xcassets */; };
 		2B32715D2202E6120092C9F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B32715B2202E6120092C9F7 /* LaunchScreen.storyboard */; };
@@ -56,6 +60,10 @@
 
 /* Begin PBXFileReference section */
 		110DD6AB9BFD919B34A32AE8 /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+		2B1CFF1922375E8800B48618 /* GYRouterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYRouterProvider.swift; sourceTree = "<group>"; };
+		2B1CFF1B22375E9C00B48618 /* GYRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYRouter.swift; sourceTree = "<group>"; };
+		2B1CFF1D22375EBD00B48618 /* UIViewController+TopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TopVC.swift"; sourceTree = "<group>"; };
+		2B1CFF1F22375FDD00B48618 /* GYRouterConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYRouterConfig.swift; sourceTree = "<group>"; };
 		2B32714F2202E6100092C9F7 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B3271522202E6100092C9F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B3271592202E6120092C9F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,15 +135,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2B1CFF1822375E4000B48618 /* GYRouterManager */ = {
+			isa = PBXGroup;
+			children = (
+				2B1CFF1D22375EBD00B48618 /* UIViewController+TopVC.swift */,
+				2B1CFF1922375E8800B48618 /* GYRouterProvider.swift */,
+				2B1CFF1B22375E9C00B48618 /* GYRouter.swift */,
+			);
+			path = GYRouterManager;
+			sourceTree = "<group>";
+		};
 		2B3271462202E6100092C9F7 = {
 			isa = PBXGroup;
 			children = (
 				2B3271512202E6100092C9F7 /* SwiftDemo */,
 				2B3271662202E6120092C9F7 /* SwiftDemoTests */,
 				2B3271712202E6120092C9F7 /* SwiftDemoUITests */,
-				2B3271502202E6100092C9F7 /* Products */,
-				D37A823CBAE463CF3C6C6A89 /* Pods */,
 				0876B4D8AE6C8DF1F81DB47C /* Frameworks */,
+				D37A823CBAE463CF3C6C6A89 /* Pods */,
+				2B3271502202E6100092C9F7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +207,7 @@
 		2B3271802202EB300092C9F7 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				2B1CFF1F22375FDD00B48618 /* GYRouterConfig.swift */,
 				2B3271812202EB300092C9F7 /* GYMoyaConfig.swift */,
 				2B3271822202EB300092C9F7 /* Const.swift */,
 			);
@@ -208,6 +227,7 @@
 		2B3271882202EB300092C9F7 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				2B1CFF1822375E4000B48618 /* GYRouterManager */,
 				2B3BCE38223242AA0009FF70 /* GYGaussianBlur */,
 				2B712E45220420FB00D2ACC7 /* CommonFuction */,
 			);
@@ -234,6 +254,7 @@
 		2B32718E2202EB300092C9F7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2B7E409822361072007321BB /* GYGradualAnimation */,
 				2B32718F2202EB300092C9F7 /* Refresh */,
 			);
 			path = View;
@@ -296,7 +317,6 @@
 		2B3BCE3F223267480009FF70 /* GradualNavi */ = {
 			isa = PBXGroup;
 			children = (
-				2B7E409822361072007321BB /* GYGradualAnimation */,
 				2B3BCE40223267710009FF70 /* GYGradualNaviViewController.swift */,
 				2B3BCE41223267710009FF70 /* GYGradualNaviViewController.xib */,
 			);
@@ -521,20 +541,24 @@
 				2B3271982202EB300092C9F7 /* GYApi.swift in Sources */,
 				2B3271992202EB300092C9F7 /* GYModel.swift in Sources */,
 				2B3271962202EB300092C9F7 /* GYRootNavigationController.swift in Sources */,
+				2B1CFF2022375FDD00B48618 /* GYRouterConfig.swift in Sources */,
 				2B32719A2202EB300092C9F7 /* URefresh.swift in Sources */,
 				2B712E4922042C5B00D2ACC7 /* GYViewLayer.swift in Sources */,
 				2B32719F2202EBC90092C9F7 /* GYHomeViewController.swift in Sources */,
 				2B3271A32202EBD60092C9F7 /* GYMineViewController.swift in Sources */,
 				2B3BCE3C223248D70009FF70 /* GYGaussianBlurViewController.swift in Sources */,
 				2B7E409A22362F87007321BB /* GYGradualView.swift in Sources */,
+				2B1CFF1E22375EBD00B48618 /* UIViewController+TopVC.swift in Sources */,
 				2B3271532202E6100092C9F7 /* AppDelegate.swift in Sources */,
 				2B79D86622111CF0002FC0D3 /* demo.swift in Sources */,
 				2B3271922202EB300092C9F7 /* GYMoyaConfig.swift in Sources */,
 				2B3BCE42223267710009FF70 /* GYGradualNaviViewController.swift in Sources */,
 				2B712E472204216500D2ACC7 /* GYCommonFuction.swift in Sources */,
 				2B3271932202EB300092C9F7 /* Const.swift in Sources */,
+				2B1CFF1C22375E9C00B48618 /* GYRouter.swift in Sources */,
 				2B3271952202EB300092C9F7 /* GYRootViewController.swift in Sources */,
 				2B3271942202EB300092C9F7 /* GYRootTabBarController.swift in Sources */,
+				2B1CFF1A22375E8800B48618 /* GYRouterProvider.swift in Sources */,
 				2B3271972202EB300092C9F7 /* GYNetworkManager.swift in Sources */,
 				2B37A327223109B30074626A /* GYGaussianBlur.swift in Sources */,
 			);

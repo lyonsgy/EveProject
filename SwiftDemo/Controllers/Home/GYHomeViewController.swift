@@ -13,20 +13,16 @@ import Accelerate
 class GYHomeViewController: GYRootViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    struct item {
-        var title: String
-        var className: String
-    }
+    
     let cellID = "cell"
-    var list: Array<item> = []
+    var list: Array<String> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //不想在 tabbarItem 上显示 title 就使用 navigationItem 的方法
         self.navigationItem.title = "首页"
         
-        self.list = [item(title: "高斯模糊", className: "GYGaussianBlurViewController"),
-                     item(title: "渐变导航", className: "GYGradualNaviViewController")]
+        self.list = ["GYGaussianBlurViewController","GYGradualNaviViewController"]
         
         // 2.设置数据源代理
         self.tableView.dataSource = self
@@ -44,16 +40,22 @@ extension GYHomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID)
-        cell?.textLabel?.text = self.list[indexPath.row].title
-        
+        let className = self.list[indexPath.row]
+        let type = Router(rawValue: className)
+        cell?.textLabel?.text = type?.title
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let className = self.list[indexPath.row].className
-        self.navigationController?.pushViewController(className.stringChangeToVC()!, animated: true)
-        print("点击了\(indexPath.row)")
+        let className = self.list[indexPath.row]
+        let type = Router(rawValue: className)
+        guard let target = type else {
+            return
+        }
+        Page.jump(from: self, to: target, with: ["status" : "ON"]) { (params) in
+            print(params)
+        }
     }
     
 }

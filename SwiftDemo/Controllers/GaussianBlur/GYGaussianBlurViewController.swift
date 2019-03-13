@@ -18,7 +18,6 @@ class GYGaussianBlurViewController: GYRootViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "高斯模糊"
         callback = getExtra(Page.callback)!
         imageView.kf.setImage(with: URL(string: "https://i7.wenshen520.com/c/42.jpg")) { (image, error, cacheType, url) in
             if (image != nil) {

@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //初始化语言
+        
         //设置 HUD 的样式
         setHudStyle()
         let screen = UIScreen.main.bounds        //获得设备尺寸

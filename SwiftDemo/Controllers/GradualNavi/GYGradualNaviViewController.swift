@@ -27,7 +27,7 @@ extension GYGradualNaviViewController: UITableViewDataSource, UITableViewDelegat
         // 取消掉底部的那根线
         navigationController?.navigationBar.shadowImage = UIImage.init()
         
-        //设置标题
+        // 设置标题
         let titleLabel = UILabel.init()
         titleLabel.text = "渐变导航"
         titleLabel.sizeToFit()

@@ -59,13 +59,13 @@ extension Router: ControllerConvertible {
         
         switch self {
         case .Home:
-            return "首页"
+            return NSLocalizedString("首页", comment: "")
         case .Mine:
-            return "我的"
+            return NSLocalizedString("我的", comment: "")
         case .gaussianBlur:
-            return "高斯模糊"
+            return NSLocalizedString("高斯模糊", comment: "")
         case .gradualNavi:
-            return "动态导航"
+            return NSLocalizedString("动态导航", comment: "")
         }
         
     }

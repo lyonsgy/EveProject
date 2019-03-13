@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  SwiftDemo
+
+  Created by lyons on 2019/3/13.
+  Copyright © 2019 lyons. All rights reserved.
+*/
+
+"首页" = "ホーム";
+"我的" = "私の";
+"高斯模糊" = "ガウスぼかし";
+"动态导航" = "動的ナビゲーション";

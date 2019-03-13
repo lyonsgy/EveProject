@@ -36,7 +36,6 @@
 		2B3BCE43223267710009FF70 /* GYGradualNaviViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3BCE41223267710009FF70 /* GYGradualNaviViewController.xib */; };
 		2B712E472204216500D2ACC7 /* GYCommonFuction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B712E462204216500D2ACC7 /* GYCommonFuction.swift */; };
 		2B712E4922042C5B00D2ACC7 /* GYViewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B712E4822042C5B00D2ACC7 /* GYViewLayer.swift */; };
-		2B79D86622111CF0002FC0D3 /* demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B79D86522111CF0002FC0D3 /* demo.swift */; };
 		2B7E409A22362F87007321BB /* GYGradualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E409922362F87007321BB /* GYGradualView.swift */; };
 		F91F780103C18FFBFC431C1F /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CAFC3AA607736DE530FC962 /* Pods_SwiftDemo.framework */; };
 /* End PBXBuildFile section */
@@ -95,7 +94,6 @@
 		2B3BCE41223267710009FF70 /* GYGradualNaviViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GYGradualNaviViewController.xib; sourceTree = "<group>"; };
 		2B712E462204216500D2ACC7 /* GYCommonFuction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYCommonFuction.swift; sourceTree = "<group>"; };
 		2B712E4822042C5B00D2ACC7 /* GYViewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYViewLayer.swift; sourceTree = "<group>"; };
-		2B79D86522111CF0002FC0D3 /* demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demo.swift; sourceTree = "<group>"; };
 		2B7E409922362F87007321BB /* GYGradualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYGradualView.swift; sourceTree = "<group>"; };
 		2CAFC3AA607736DE530FC962 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9400E218B6C836FCF9763185 /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 				2B3271592202E6120092C9F7 /* Assets.xcassets */,
 				2B32715E2202E6120092C9F7 /* Info.plist */,
 				2B3271522202E6100092C9F7 /* AppDelegate.swift */,
-				2B79D86522111CF0002FC0D3 /* demo.swift */,
 				2B32715B2202E6120092C9F7 /* LaunchScreen.storyboard */,
 				2B3271802202EB300092C9F7 /* Config */,
 				2B3271832202EB300092C9F7 /* Root */,
@@ -507,6 +504,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/EVGPUImage2/EVGPUImage2.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -518,6 +516,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EVGPUImage2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -550,7 +549,6 @@
 				2B7E409A22362F87007321BB /* GYGradualView.swift in Sources */,
 				2B1CFF1E22375EBD00B48618 /* UIViewController+TopVC.swift in Sources */,
 				2B3271532202E6100092C9F7 /* AppDelegate.swift in Sources */,
-				2B79D86622111CF0002FC0D3 /* demo.swift in Sources */,
 				2B3271922202EB300092C9F7 /* GYMoyaConfig.swift in Sources */,
 				2B3BCE42223267710009FF70 /* GYGradualNaviViewController.swift in Sources */,
 				2B712E472204216500D2ACC7 /* GYCommonFuction.swift in Sources */,

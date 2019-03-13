@@ -10,6 +10,7 @@ def pods
     pod 'SnapKit'
     pod 'Kingfisher'
     pod 'HandyJSON', '~> 4.2.0'
+    pod 'EVGPUImage2', '~> 0.2.0'
 end
 
 target 'SwiftDemo' do

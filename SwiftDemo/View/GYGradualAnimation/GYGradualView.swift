@@ -134,7 +134,7 @@ extension GYGradualView {
         }else if(alpha<0){
             alpha = 0
         }
-        //        print(alpha)
+        //print(alpha)
         bgImageView.setGaussianBlurImage(with: URL(string: "https://i7.wenshen520.com/c/42.jpg"), blurNumber:Float(alpha))
         
         //拿到标题 标题文字的随着移动高度的变化而变化

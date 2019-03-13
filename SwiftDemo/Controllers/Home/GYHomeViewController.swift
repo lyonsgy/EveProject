@@ -28,17 +28,22 @@ class GYHomeViewController: GYRootViewController {
         // 4.注册cell
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.rightBarButtonItem?.title = GYLanguageHelper().nowlanguage
+    }
 }
 
 extension GYHomeViewController: UITableViewDataSource, UITableViewDelegate {
     func setNaviBarItem() {
         // 在右侧添加一个按钮
-        let barButtonItem = UIBarButtonItem(title: GYLanguageHelper.getLanguage(), style: UIBarButtonItem.Style.plain, target: self, action: #selector(change))
+        let barButtonItem = UIBarButtonItem(title: GYLanguageHelper().nowlanguage, style: UIBarButtonItem.Style.plain, target: self, action: #selector(change))
         navigationItem.rightBarButtonItem = barButtonItem
     }
     @objc func change(){
-        GYLanguageHelper.changeLanguage(language: language.en.rawValue)
-        navigationItem.rightBarButtonItem?.title = GYLanguageHelper.getLanguage()
+        Page.jump(from: self, to: Router(rawValue: Router.languages.rawValue)!, with: [:]) { (params) in
+            print(params)
+        }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
@@ -61,5 +66,4 @@ extension GYHomeViewController: UITableViewDataSource, UITableViewDelegate {
             print(params)
         }
     }
-    
 }

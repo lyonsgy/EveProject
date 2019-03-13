@@ -14,6 +14,7 @@ let Page = GYRouterProvider<Router>()
 enum Router: String {
     case Home               = "GYHomeViewController"        // 首页
     case Mine               = "GYMineViewController"        // 个人中心
+    case languages          = "GYLanguagesViewController"   // 国际化
     case gaussianBlur       = "GYGaussianBlurViewController" // 动态高斯模糊
     case gradualNavi        = "GYGradualNaviViewController"  // 动态导航
 }
@@ -22,12 +23,13 @@ enum Router: String {
 extension Router: ControllerConvertible {
     // 目标类
     var target: UIViewController.Type {
-        
         switch self {
         case .Home:
             return GYHomeViewController.self
         case .Mine:
             return GYMineViewController.self
+        case .languages:
+            return GYLanguagesViewController.self
         case .gaussianBlur:
             return GYGaussianBlurViewController.self
         case .gradualNavi:
@@ -51,7 +53,6 @@ extension Router: ControllerConvertible {
 //        case .gradualNavi:
 //            return .present(parent: UINavigationController.self)
         }
-        
     }
     
     // 目标类标题
@@ -62,6 +63,8 @@ extension Router: ControllerConvertible {
             return NSLocalizedString("首页", comment: "")
         case .Mine:
             return NSLocalizedString("我的", comment: "")
+        case .languages:
+            return NSLocalizedString("语言", comment: "")
         case .gaussianBlur:
             return NSLocalizedString("高斯模糊", comment: "")
         case .gradualNavi:

@@ -12,8 +12,7 @@ class GYMineViewController: GYRootViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = NSLocalizedString("我的", comment: "")
-
+        self.navigationItem.title = "我的".localized
     }
     
 }

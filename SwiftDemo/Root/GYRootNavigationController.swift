@@ -9,7 +9,7 @@
 import UIKit
 
 class GYRootNavigationController: UINavigationController {
-
+    
 }
 
 extension GYRootNavigationController

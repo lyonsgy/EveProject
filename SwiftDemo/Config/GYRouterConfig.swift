@@ -60,15 +60,15 @@ extension Router: ControllerConvertible {
         
         switch self {
         case .Home:
-            return NSLocalizedString("首页", comment: "")
+            return "首页".localized
         case .Mine:
-            return NSLocalizedString("我的", comment: "")
+            return "我的".localized
         case .languages:
-            return NSLocalizedString("语言", comment: "")
+            return "语言".localized
         case .gaussianBlur:
-            return NSLocalizedString("高斯模糊", comment: "")
+            return "高斯模糊".localized
         case .gradualNavi:
-            return NSLocalizedString("动态导航", comment: "")
+            return "动态导航".localized
         }
         
     }

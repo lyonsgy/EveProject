@@ -20,7 +20,7 @@ class GYHomeViewController: GYRootViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //不想在 tabbarItem 上显示 title 就使用 navigationItem 的方法
-        navigationItem.title = NSLocalizedString("首页", comment: "")
+        navigationItem.title = "首页".localized
         
         setNaviBarItem()
         
@@ -30,14 +30,14 @@ class GYHomeViewController: GYRootViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.rightBarButtonItem?.title = GYLanguageHelper().nowlanguage
+        navigationItem.rightBarButtonItem?.title = GYLanguageHelper.currentLanName().localized
     }
 }
 
 extension GYHomeViewController: UITableViewDataSource, UITableViewDelegate {
     func setNaviBarItem() {
         // 在右侧添加一个按钮
-        let barButtonItem = UIBarButtonItem(title: GYLanguageHelper().nowlanguage, style: UIBarButtonItem.Style.plain, target: self, action: #selector(change))
+        let barButtonItem = UIBarButtonItem(title: GYLanguageHelper.currentLanName().localized, style: UIBarButtonItem.Style.plain, target: self, action: #selector(change))
         navigationItem.rightBarButtonItem = barButtonItem
     }
     @objc func change(){

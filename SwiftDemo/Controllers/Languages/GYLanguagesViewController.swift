@@ -9,13 +9,12 @@
 import UIKit
 
 class GYLanguagesViewController: GYRootViewController {
-    let cellID = "cell"
+    let cellID = "tableViewCell"
     var list: Array<language> = [language.system,language.en,language.zh,language.zhHK,language.ja]
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
     }
 }

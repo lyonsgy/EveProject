@@ -6,5 +6,5 @@
   Copyright © 2019 lyons. All rights reserved.
 */
 
-// Localizable App Name是App在该环境环境下显示的名称
+// App在该环境下显示的名称
 CFBundleDisplayName = "swiftデモ";

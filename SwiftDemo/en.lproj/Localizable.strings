@@ -6,8 +6,8 @@
   Copyright © 2019 lyons. All rights reserved.
 */
 
-"首页" = "Homes";
-"我的" = "Mines";
+"首页" = "Home";
+"我的" = "Mine";
 "高斯模糊" = "GaussianBlurs";
 "动态导航" = "GradualNavis";
 "语言" = "Languages";

@@ -36,9 +36,9 @@
 		2B3BCE3D223248D70009FF70 /* GYGaussianBlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3BCE3B223248D70009FF70 /* GYGaussianBlurViewController.xib */; };
 		2B3BCE42223267710009FF70 /* GYGradualNaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BCE40223267710009FF70 /* GYGradualNaviViewController.swift */; };
 		2B3BCE43223267710009FF70 /* GYGradualNaviViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3BCE41223267710009FF70 /* GYGradualNaviViewController.xib */; };
-		2B529A0A223A38B4007CCE34 /* GYLanguagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B529A0C223A38B4007CCE34 /* GYLanguagesViewController.xib */; };
 		2B712E472204216500D2ACC7 /* GYCommonFuction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B712E462204216500D2ACC7 /* GYCommonFuction.swift */; };
 		2B712E4922042C5B00D2ACC7 /* GYViewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B712E4822042C5B00D2ACC7 /* GYViewLayer.swift */; };
+		2B7597CD223BA7F700F99A92 /* GYLanguagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B7597CC223BA7F700F99A92 /* GYLanguagesViewController.xib */; };
 		2B7E409A22362F87007321BB /* GYGradualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E409922362F87007321BB /* GYGradualView.swift */; };
 		2BC1AE4E2238E950005CF9F7 /* GYLanguageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1AE4D2238E950005CF9F7 /* GYLanguageHelper.swift */; };
 		2BC1AE562238F3EB005CF9F7 /* GYLanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1AE542238F3EB005CF9F7 /* GYLanguagesViewController.swift */; };
@@ -109,13 +109,9 @@
 		2B529A072239F0CE007CCE34 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		2B529A082239F0CE007CCE34 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		2B529A092239F0CE007CCE34 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		2B529A0B223A38B4007CCE34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GYLanguagesViewController.xib; sourceTree = "<group>"; };
-		2B529A0E223A38B6007CCE34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GYLanguagesViewController.strings; sourceTree = "<group>"; };
-		2B529A10223A38B7007CCE34 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/GYLanguagesViewController.strings; sourceTree = "<group>"; };
-		2B529A12223A38B8007CCE34 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/GYLanguagesViewController.strings"; sourceTree = "<group>"; };
-		2B529A14223A38BB007CCE34 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/GYLanguagesViewController.strings"; sourceTree = "<group>"; };
 		2B712E462204216500D2ACC7 /* GYCommonFuction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYCommonFuction.swift; sourceTree = "<group>"; };
 		2B712E4822042C5B00D2ACC7 /* GYViewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYViewLayer.swift; sourceTree = "<group>"; };
+		2B7597CC223BA7F700F99A92 /* GYLanguagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GYLanguagesViewController.xib; sourceTree = "<group>"; };
 		2B7E409922362F87007321BB /* GYGradualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYGradualView.swift; sourceTree = "<group>"; };
 		2BC1AE4D2238E950005CF9F7 /* GYLanguageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYLanguageHelper.swift; sourceTree = "<group>"; };
 		2BC1AE542238F3EB005CF9F7 /* GYLanguagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYLanguagesViewController.swift; sourceTree = "<group>"; };
@@ -379,7 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				2BC1AE542238F3EB005CF9F7 /* GYLanguagesViewController.swift */,
-				2B529A0C223A38B4007CCE34 /* GYLanguagesViewController.xib */,
+				2B7597CC223BA7F700F99A92 /* GYLanguagesViewController.xib */,
 			);
 			path = Languages;
 			sourceTree = "<group>";
@@ -506,7 +502,7 @@
 				2B1CFF2C2238AA0400B48618 /* InfoPlist.strings in Resources */,
 				2B3BCE3D223248D70009FF70 /* GYGaussianBlurViewController.xib in Resources */,
 				2B3271A42202EBD60092C9F7 /* GYMineViewController.xib in Resources */,
-				2B529A0A223A38B4007CCE34 /* GYLanguagesViewController.xib in Resources */,
+				2B7597CD223BA7F700F99A92 /* GYLanguagesViewController.xib in Resources */,
 				2B3BCE43223267710009FF70 /* GYGradualNaviViewController.xib in Resources */,
 				2B1CFF332238ACE500B48618 /* Localizable.strings in Resources */,
 				2B3271A02202EBC90092C9F7 /* GYHomeViewController.xib in Resources */,
@@ -681,18 +677,6 @@
 				2B529A072239F0CE007CCE34 /* zh-HK */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		2B529A0C223A38B4007CCE34 /* GYLanguagesViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2B529A0B223A38B4007CCE34 /* Base */,
-				2B529A0E223A38B6007CCE34 /* en */,
-				2B529A10223A38B7007CCE34 /* ja */,
-				2B529A12223A38B8007CCE34 /* zh-Hans */,
-				2B529A14223A38BB007CCE34 /* zh-HK */,
-			);
-			name = GYLanguagesViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

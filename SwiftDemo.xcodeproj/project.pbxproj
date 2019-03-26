@@ -43,6 +43,8 @@
 		2BC1AE4E2238E950005CF9F7 /* GYLanguageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1AE4D2238E950005CF9F7 /* GYLanguageHelper.swift */; };
 		2BC1AE562238F3EB005CF9F7 /* GYLanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1AE542238F3EB005CF9F7 /* GYLanguagesViewController.swift */; };
 		2BC1AE5922390292005CF9F7 /* GYBundleEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1AE5822390292005CF9F7 /* GYBundleEx.swift */; };
+		2BD2C0172249BABD00170B1D /* GYNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2C0152249BABD00170B1D /* GYNotificationViewController.swift */; };
+		2BD2C0182249BABD00170B1D /* GYNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD2C0162249BABD00170B1D /* GYNotificationViewController.xib */; };
 		F91F780103C18FFBFC431C1F /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CAFC3AA607736DE530FC962 /* Pods_SwiftDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +118,8 @@
 		2BC1AE4D2238E950005CF9F7 /* GYLanguageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYLanguageHelper.swift; sourceTree = "<group>"; };
 		2BC1AE542238F3EB005CF9F7 /* GYLanguagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYLanguagesViewController.swift; sourceTree = "<group>"; };
 		2BC1AE5822390292005CF9F7 /* GYBundleEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYBundleEx.swift; sourceTree = "<group>"; };
+		2BD2C0152249BABD00170B1D /* GYNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYNotificationViewController.swift; sourceTree = "<group>"; };
+		2BD2C0162249BABD00170B1D /* GYNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GYNotificationViewController.xib; sourceTree = "<group>"; };
 		2CAFC3AA607736DE530FC962 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9400E218B6C836FCF9763185 /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -292,6 +296,7 @@
 		2B3271912202EB300092C9F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2BD2C0142249BA6900170B1D /* Notification */,
 				2BC1AE532238F353005CF9F7 /* Languages */,
 				2B32719B2202EB8E0092C9F7 /* Home */,
 				2B32719C2202EB930092C9F7 /* Mine */,
@@ -378,6 +383,15 @@
 				2B7597CC223BA7F700F99A92 /* GYLanguagesViewController.xib */,
 			);
 			path = Languages;
+			sourceTree = "<group>";
+		};
+		2BD2C0142249BA6900170B1D /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				2BD2C0152249BABD00170B1D /* GYNotificationViewController.swift */,
+				2BD2C0162249BABD00170B1D /* GYNotificationViewController.xib */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		D37A823CBAE463CF3C6C6A89 /* Pods */ = {
@@ -504,6 +518,7 @@
 				2B3271A42202EBD60092C9F7 /* GYMineViewController.xib in Resources */,
 				2B7597CD223BA7F700F99A92 /* GYLanguagesViewController.xib in Resources */,
 				2B3BCE43223267710009FF70 /* GYGradualNaviViewController.xib in Resources */,
+				2BD2C0182249BABD00170B1D /* GYNotificationViewController.xib in Resources */,
 				2B1CFF332238ACE500B48618 /* Localizable.strings in Resources */,
 				2B3271A02202EBC90092C9F7 /* GYHomeViewController.xib in Resources */,
 				2B32715A2202E6120092C9F7 /* Assets.xcassets in Resources */,
@@ -601,6 +616,7 @@
 				2B3271922202EB300092C9F7 /* GYMoyaConfig.swift in Sources */,
 				2B3BCE42223267710009FF70 /* GYGradualNaviViewController.swift in Sources */,
 				2B712E472204216500D2ACC7 /* GYCommonFuction.swift in Sources */,
+				2BD2C0172249BABD00170B1D /* GYNotificationViewController.swift in Sources */,
 				2B3271932202EB300092C9F7 /* Const.swift in Sources */,
 				2BC1AE562238F3EB005CF9F7 /* GYLanguagesViewController.swift in Sources */,
 				2B1CFF1C22375E9C00B48618 /* GYRouter.swift in Sources */,

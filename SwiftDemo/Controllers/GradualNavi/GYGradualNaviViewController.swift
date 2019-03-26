@@ -29,7 +29,7 @@ extension GYGradualNaviViewController: UITableViewDataSource, UITableViewDelegat
         
         // 设置标题
         let titleLabel = UILabel.init()
-        titleLabel.text = "渐变导航"
+        titleLabel.text = "动态导航".localized
         titleLabel.sizeToFit()
         // 开始的时候看不见，所以alpha值为0
         titleLabel.textColor = UIColor.init(white: 0, alpha: 0)

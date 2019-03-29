@@ -17,6 +17,8 @@ enum Router: String {
     case languages          = "GYLanguagesViewController"   // 国际化
     case gaussianBlur       = "GYGaussianBlurViewController" // 动态高斯模糊
     case gradualNavi        = "GYGradualNaviViewController"  // 动态导航
+    case notification       = "GYNotificationViewController"  // 动态导航
+
 }
 
 
@@ -34,6 +36,8 @@ extension Router: ControllerConvertible {
             return GYGaussianBlurViewController.self
         case .gradualNavi:
             return GYGradualNaviViewController.self
+        case .notification:
+            return GYNotificationViewController.self
         }
         
     }
@@ -42,7 +46,7 @@ extension Router: ControllerConvertible {
     var method: ControllerOperation {
         
         switch self {
-        case .gaussianBlur, .gradualNavi:
+        case .gaussianBlur, .gradualNavi, .notification:
             return .push
         default:
             return .push
@@ -69,6 +73,8 @@ extension Router: ControllerConvertible {
             return "高斯模糊".localized
         case .gradualNavi:
             return "动态导航".localized
+        case .notification:
+            return "通知".localized
         }
         
     }

@@ -45,6 +45,7 @@
 		2BC1AE5922390292005CF9F7 /* GYBundleEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1AE5822390292005CF9F7 /* GYBundleEx.swift */; };
 		2BD2C0172249BABD00170B1D /* GYNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2C0152249BABD00170B1D /* GYNotificationViewController.swift */; };
 		2BD2C0182249BABD00170B1D /* GYNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD2C0162249BABD00170B1D /* GYNotificationViewController.xib */; };
+		2BD2C01E2249F6DE00170B1D /* GYNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2C01D2249F6DE00170B1D /* GYNotificationHelper.swift */; };
 		F91F780103C18FFBFC431C1F /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CAFC3AA607736DE530FC962 /* Pods_SwiftDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +121,8 @@
 		2BC1AE5822390292005CF9F7 /* GYBundleEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYBundleEx.swift; sourceTree = "<group>"; };
 		2BD2C0152249BABD00170B1D /* GYNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYNotificationViewController.swift; sourceTree = "<group>"; };
 		2BD2C0162249BABD00170B1D /* GYNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GYNotificationViewController.xib; sourceTree = "<group>"; };
+		2BD2C0192249CCA300170B1D /* SwiftDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftDemo.entitlements; sourceTree = "<group>"; };
+		2BD2C01D2249F6DE00170B1D /* GYNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYNotificationHelper.swift; sourceTree = "<group>"; };
 		2CAFC3AA607736DE530FC962 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9400E218B6C836FCF9763185 /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +196,7 @@
 		2B3271512202E6100092C9F7 /* SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2BD2C0192249CCA300170B1D /* SwiftDemo.entitlements */,
 				2B32715B2202E6120092C9F7 /* LaunchScreen.storyboard */,
 				2B3271592202E6120092C9F7 /* Assets.xcassets */,
 				2B32715E2202E6120092C9F7 /* Info.plist */,
@@ -251,6 +255,7 @@
 		2B3271882202EB300092C9F7 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				2BD2C01A2249F44800170B1D /* GYNotificationHelper */,
 				2BC1AE4C2238E921005CF9F7 /* GYLanguageHelper */,
 				2B1CFF1822375E4000B48618 /* GYRouterManager */,
 				2B3BCE38223242AA0009FF70 /* GYGaussianBlur */,
@@ -394,6 +399,14 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		2BD2C01A2249F44800170B1D /* GYNotificationHelper */ = {
+			isa = PBXGroup;
+			children = (
+				2BD2C01D2249F6DE00170B1D /* GYNotificationHelper.swift */,
+			);
+			path = GYNotificationHelper;
+			sourceTree = "<group>";
+		};
 		D37A823CBAE463CF3C6C6A89 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,6 +486,11 @@
 				TargetAttributes = {
 					2B32714E2202E6100092C9F7 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					2B3271622202E6120092C9F7 = {
 						CreatedOnToolsVersion = 10.1;
@@ -622,6 +640,7 @@
 				2B1CFF1C22375E9C00B48618 /* GYRouter.swift in Sources */,
 				2B3271952202EB300092C9F7 /* GYRootViewController.swift in Sources */,
 				2BC1AE5922390292005CF9F7 /* GYBundleEx.swift in Sources */,
+				2BD2C01E2249F6DE00170B1D /* GYNotificationHelper.swift in Sources */,
 				2B3271942202EB300092C9F7 /* GYRootTabBarController.swift in Sources */,
 				2B1CFF1A22375E8800B48618 /* GYRouterProvider.swift in Sources */,
 				2B3271972202EB300092C9F7 /* GYNetworkManager.swift in Sources */,

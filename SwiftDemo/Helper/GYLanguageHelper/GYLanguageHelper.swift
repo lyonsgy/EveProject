@@ -39,8 +39,8 @@ extension language: languageType {
             return "系统语言"
         }
     }
-    
 }
+
 class GYLanguageHelper {
     static func setUserLanguage (userLanguage:String){
         //跟随手机系统

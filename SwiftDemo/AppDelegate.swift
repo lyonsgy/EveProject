@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Or for macOS:
         Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/macOSInjection10.bundle")?.load()
         #endif
+        
+        //注册通知
+        GYNotificationHelper.initSystemLanguage(appDelegate: self)
+        
         //初始化语言
 //        GYLanguageHelper.initSystemLanguage()
         
@@ -57,7 +62,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
-

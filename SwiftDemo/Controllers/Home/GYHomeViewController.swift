@@ -15,7 +15,7 @@ class GYHomeViewController: GYRootViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let cellID = "cell"
-    var list: Array<String> = []
+    var list: Array<Router> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +23,7 @@ class GYHomeViewController: GYRootViewController {
         navigationItem.title = "首页".localized
         
         setNaviBarItem()
-        
-        list = ["GYGaussianBlurViewController","GYGradualNaviViewController"]
+        list = [Router.gaussianBlur,Router.gradualNavi,Router.notification]
         // 4.注册cell
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
     }
@@ -51,18 +50,16 @@ extension GYHomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID)
         let className = list[indexPath.row]
-        let type = Router(rawValue: className)
-        cell?.textLabel?.text = type?.title
+        cell?.textLabel?.text = className.title
         return cell!
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let className = list[indexPath.row]
-        let type = Router(rawValue: className)
-        guard let target = type else {
+        guard type(of: className) == Router.self else {
             return
         }
-        Page.jump(from: self, to: target, with: ["status" : "ON"]) { (params) in
+        Page.jump(from: self, to: className, with: ["status" : "ON"]) { (params) in
             print(params)
         }
     }

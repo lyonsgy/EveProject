@@ -263,6 +263,7 @@ var isNetworkConnect: Bool {
     }
 }
 
+/*
 /// Demo中并未使用，以后如果有数组转json可以用这个。
 struct JSONArrayEncoding: ParameterEncoding {
     static let `default` = JSONArrayEncoding()
@@ -285,6 +286,7 @@ struct JSONArrayEncoding: ParameterEncoding {
         return request
     }
 }
+*/
 
 //给 Response 增加了json 格式化方法
 extension Response {

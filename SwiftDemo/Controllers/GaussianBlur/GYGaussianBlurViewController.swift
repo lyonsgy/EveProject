@@ -8,7 +8,6 @@
 
 import UIKit
 import AVFoundation
-import EVGPUImage2
 
 class GYGaussianBlurViewController: GYRootViewController {
     private var callback: Complated!

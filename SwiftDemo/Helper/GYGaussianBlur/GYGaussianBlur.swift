@@ -20,28 +20,27 @@ extension UIImageView{
     ///   - placeholder: 默认图
     ///   - options: 可以控制一些行为的字典（具体查看Kingfisher文档）
     ///   - progressBlock: 当图像下载进度更新时调用
-    ///   - completionHandler: 默认图
+    ///   - completionHandler: 回调
     /// - Returns: 在检索和设置图像时调用
     @discardableResult
     public func setGaussianBlurImage(with resource: Resource?,
-                  blurNumber: Float?,
-                  placeholder: Placeholder? = nil,
-                  options: KingfisherOptionsInfo? = nil,
-                  progressBlock: DownloadProgressBlock? = nil,
-                  completionHandler: CompletionHandler? = nil) -> RetrieveImageTask {
-        return self.kf.setImage(with: resource,
-                         placeholder: placeholder,
-                         options: options,
-                         progressBlock: progressBlock) { (image, error, cacheType, imageUrl) in
-            if(image != nil){
-                self.image = image!.gaussianBlur(blurNumber: blurNumber ?? 0.0)
+                                     blurNumber: Float?,
+                                     placeholder: Placeholder? = nil,
+                                     options: KingfisherOptionsInfo? = nil,
+                                     progressBlock: DownloadProgressBlock? = nil,
+                                     completionHandler: ((Result<RetrieveImageResult, KingfisherError>) -> Void)? = nil) -> DownloadTask? {
+        return self.kf.setImage(with: resource, placeholder: placeholder, options: options, progressBlock: progressBlock) { (result) in
+            switch result {
+            case .success(let value):
+                self.image = value.image.gaussianBlur(blurNumber: blurNumber ?? 0.0)
+            case .failure( _):
+                break
             }
         }
     }
 }
 
 extension UIImage {
-    
     /// UIImage高斯模糊
     ///
     /// - Parameter blurNumber: 模糊度

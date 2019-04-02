@@ -54,7 +54,7 @@ public extension UIViewController {
         }
         return controller
     }
-    public class func topWindowController() -> UIViewController? {
+    class func topWindowController() -> UIViewController? {
         guard let window = UIViewController.getCurrentWindow() else {
             return nil;
         }

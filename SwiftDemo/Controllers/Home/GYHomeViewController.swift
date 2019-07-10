@@ -11,7 +11,7 @@ import Kingfisher
 import Accelerate
 
 class GYHomeViewController: GYRootViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     let cellID = "cell"
@@ -23,7 +23,7 @@ class GYHomeViewController: GYRootViewController {
         navigationItem.title = "首页".localized
         
         setNaviBarItem()
-        list = [Router.gaussianBlur,Router.gradualNavi,Router.notification]
+        list = [Router.gaussianBlur,Router.gradualNavi,Router.notification,Router.protocolVC,Router.webViewVC]
         // 4.注册cell
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
     }
@@ -59,8 +59,30 @@ extension GYHomeViewController: UITableViewDataSource, UITableViewDelegate {
         guard type(of: className) == Router.self else {
             return
         }
+        if(className.rawValue == "GYWebViewViewController"){
+            let alertController = UIAlertController(title: "输入url",
+                                                    message: "", preferredStyle: .alert)
+            alertController.addTextField {
+                (textField: UITextField!) -> Void in
+                textField.placeholder = "url"
+            }
+            let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            let okAction = UIAlertAction(title: "好的", style: .default, handler: {
+                action in
+                //也可以用下标的形式获取textField let login = alertController.textFields![0]
+                let url = alertController.textFields!.first!
+                Page.jump(from: self, to: className, with: ["status" : "ON", "url" : url.text!]) { (params) in
+                    print(params)
+                }
+            })
+            alertController.addAction(cancelAction)
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
         Page.jump(from: self, to: className, with: ["status" : "ON"]) { (params) in
             print(params)
         }
     }
 }
+

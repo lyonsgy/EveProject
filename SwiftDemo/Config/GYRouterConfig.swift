@@ -18,7 +18,8 @@ enum Router: String {
     case gaussianBlur       = "GYGaussianBlurViewController" // 动态高斯模糊
     case gradualNavi        = "GYGradualNaviViewController"  // 动态导航
     case notification       = "GYNotificationViewController"  // 动态导航
-
+    case protocolVC         = "GYProtocolViewController"      // 协议
+    case webViewVC          = "GYWebViewViewController"      //内置浏览器
 }
 
 
@@ -38,6 +39,10 @@ extension Router: ControllerConvertible {
             return GYGradualNaviViewController.self
         case .notification:
             return GYNotificationViewController.self
+        case .protocolVC:
+            return GYProtocolViewController.self
+        case .webViewVC:
+            return GYWebViewViewController.self
         }
         
     }
@@ -46,7 +51,7 @@ extension Router: ControllerConvertible {
     var method: ControllerOperation {
         
         switch self {
-        case .gaussianBlur, .gradualNavi, .notification:
+        case .gaussianBlur, .gradualNavi, .notification, .protocolVC, .webViewVC:
             return .push
         default:
             return .push
@@ -75,6 +80,10 @@ extension Router: ControllerConvertible {
             return "动态导航".localized
         case .notification:
             return "通知".localized
+        case .protocolVC:
+            return "协议".localized
+        case .webViewVC:
+            return "浏览器".localized
         }
         
     }

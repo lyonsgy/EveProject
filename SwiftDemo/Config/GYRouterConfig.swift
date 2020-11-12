@@ -20,6 +20,7 @@ enum Router: String {
     case notification       = "GYNotificationViewController"  // 动态导航
     case protocolVC         = "GYProtocolViewController"      // 协议
     case webViewVC          = "GYWebViewViewController"      //内置浏览器
+    case stackViewVC        = "GYStackViewViewController"      //StackView
 }
 
 
@@ -43,8 +44,9 @@ extension Router: ControllerConvertible {
             return GYProtocolViewController.self
         case .webViewVC:
             return GYWebViewViewController.self
+        case .stackViewVC:
+            return GYStackViewViewController.self
         }
-        
     }
     
     // 跳转方法
@@ -55,12 +57,12 @@ extension Router: ControllerConvertible {
             return .push
         default:
             return .push
-//        case .Home, .Mine:
-//            return .push
-//        case .gaussianBlur:
-//            return .present(parent: nil)
-//        case .gradualNavi:
-//            return .present(parent: UINavigationController.self)
+            //        case .Home, .Mine:
+            //            return .push
+            //        case .gaussianBlur:
+            //            return .present(parent: nil)
+            //        case .gradualNavi:
+            //            return .present(parent: UINavigationController.self)
         }
     }
     
@@ -84,6 +86,8 @@ extension Router: ControllerConvertible {
             return "协议".localized
         case .webViewVC:
             return "浏览器".localized
+        case .stackViewVC:
+            return "StackView布局".localized
         }
         
     }

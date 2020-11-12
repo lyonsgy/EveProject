@@ -49,7 +49,6 @@
 		2BC1AE5922390292005CF9F7 /* GYBundleEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1AE5822390292005CF9F7 /* GYBundleEx.swift */; };
 		2BC723F12292746D00EA1D59 /* GYProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC723EF2292746D00EA1D59 /* GYProtocolViewController.swift */; };
 		2BC723F22292746D00EA1D59 /* GYProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC723F02292746D00EA1D59 /* GYProtocolViewController.xib */; };
-		2BCC02632546A7FF00681533 /* CookieSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC02622546A7FF00681533 /* CookieSetter.swift */; };
 		2BD2C0172249BABD00170B1D /* GYNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2C0152249BABD00170B1D /* GYNotificationViewController.swift */; };
 		2BD2C0182249BABD00170B1D /* GYNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD2C0162249BABD00170B1D /* GYNotificationViewController.xib */; };
 		2BD2C01E2249F6DE00170B1D /* GYNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2C01D2249F6DE00170B1D /* GYNotificationHelper.swift */; };
@@ -132,7 +131,6 @@
 		2BC1AE5822390292005CF9F7 /* GYBundleEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYBundleEx.swift; sourceTree = "<group>"; };
 		2BC723EF2292746D00EA1D59 /* GYProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYProtocolViewController.swift; sourceTree = "<group>"; };
 		2BC723F02292746D00EA1D59 /* GYProtocolViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GYProtocolViewController.xib; sourceTree = "<group>"; };
-		2BCC02622546A7FF00681533 /* CookieSetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieSetter.swift; sourceTree = "<group>"; };
 		2BD2C0152249BABD00170B1D /* GYNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYNotificationViewController.swift; sourceTree = "<group>"; };
 		2BD2C0162249BABD00170B1D /* GYNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GYNotificationViewController.xib; sourceTree = "<group>"; };
 		2BD2C0192249CCA300170B1D /* SwiftDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftDemo.entitlements; sourceTree = "<group>"; };
@@ -274,7 +272,6 @@
 				2B1CFF1822375E4000B48618 /* GYRouterManager */,
 				2B3BCE38223242AA0009FF70 /* GYGaussianBlur */,
 				2B712E45220420FB00D2ACC7 /* CommonFuction */,
-				2BCC02622546A7FF00681533 /* CookieSetter.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -690,7 +687,6 @@
 				2BC1AE5922390292005CF9F7 /* GYBundleEx.swift in Sources */,
 				2BD2C01E2249F6DE00170B1D /* GYNotificationHelper.swift in Sources */,
 				2B3271942202EB300092C9F7 /* GYRootTabBarController.swift in Sources */,
-				2BCC02632546A7FF00681533 /* CookieSetter.swift in Sources */,
 				2B1CFF1A22375E8800B48618 /* GYRouterProvider.swift in Sources */,
 				2B3271972202EB300092C9F7 /* GYNetworkManager.swift in Sources */,
 				2BC1AE4E2238E950005CF9F7 /* GYLanguageHelper.swift in Sources */,

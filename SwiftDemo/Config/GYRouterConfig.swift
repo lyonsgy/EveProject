@@ -19,8 +19,9 @@ enum Router: String {
     case gradualNavi        = "GYGradualNaviViewController"  // 动态导航
     case notification       = "GYNotificationViewController"  // 动态导航
     case protocolVC         = "GYProtocolViewController"      // 协议
-    case webViewVC          = "GYWebViewViewController"      //内置浏览器
-    case stackViewVC        = "GYStackViewViewController"      //StackView
+    case webViewVC          = "GYWebViewViewController"      // 内置浏览器
+    case stackViewVC        = "GYStackViewViewController"      // stackView
+    case autoLayoutVC       = "GYAutoLayoutViewController"     // autolayout
 }
 
 
@@ -46,6 +47,8 @@ extension Router: ControllerConvertible {
             return GYWebViewViewController.self
         case .stackViewVC:
             return GYStackViewViewController.self
+        case .autoLayoutVC:
+            return GYAutoLayoutViewController.self
         }
     }
     
@@ -88,6 +91,8 @@ extension Router: ControllerConvertible {
             return "浏览器".localized
         case .stackViewVC:
             return "StackView布局".localized
+        case .autoLayoutVC:
+            return "autolayout".localized
         }
         
     }

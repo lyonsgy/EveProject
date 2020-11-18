@@ -38,6 +38,8 @@
 		2B3BCE43223267710009FF70 /* GYGradualNaviViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3BCE41223267710009FF70 /* GYGradualNaviViewController.xib */; };
 		2B61D0E4255BDDB4003E7F5E /* GYStackViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B61D0E2255BDDB4003E7F5E /* GYStackViewViewController.swift */; };
 		2B61D0E5255BDDB4003E7F5E /* GYStackViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B61D0E3255BDDB4003E7F5E /* GYStackViewViewController.xib */; };
+		2B61D0E9255CDDBB003E7F5E /* GYAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B61D0E7255CDDBB003E7F5E /* GYAutoLayoutViewController.swift */; };
+		2B61D0EA255CDDBB003E7F5E /* GYAutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B61D0E8255CDDBB003E7F5E /* GYAutoLayoutViewController.xib */; };
 		2B712E472204216500D2ACC7 /* GYCommonFuction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B712E462204216500D2ACC7 /* GYCommonFuction.swift */; };
 		2B712E4922042C5B00D2ACC7 /* GYViewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B712E4822042C5B00D2ACC7 /* GYViewLayer.swift */; };
 		2B7597CD223BA7F700F99A92 /* GYLanguagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B7597CC223BA7F700F99A92 /* GYLanguagesViewController.xib */; };
@@ -120,6 +122,8 @@
 		2B529A092239F0CE007CCE34 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2B61D0E2255BDDB4003E7F5E /* GYStackViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYStackViewViewController.swift; sourceTree = "<group>"; };
 		2B61D0E3255BDDB4003E7F5E /* GYStackViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GYStackViewViewController.xib; sourceTree = "<group>"; };
+		2B61D0E7255CDDBB003E7F5E /* GYAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYAutoLayoutViewController.swift; sourceTree = "<group>"; };
+		2B61D0E8255CDDBB003E7F5E /* GYAutoLayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GYAutoLayoutViewController.xib; sourceTree = "<group>"; };
 		2B712E462204216500D2ACC7 /* GYCommonFuction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYCommonFuction.swift; sourceTree = "<group>"; };
 		2B712E4822042C5B00D2ACC7 /* GYViewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYViewLayer.swift; sourceTree = "<group>"; };
 		2B7597CC223BA7F700F99A92 /* GYLanguagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GYLanguagesViewController.xib; sourceTree = "<group>"; };
@@ -313,6 +317,7 @@
 		2B3271912202EB300092C9F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2B61D0E6255CDD3E003E7F5E /* AutoLayout */,
 				2B61D0DD255BDCFD003E7F5E /* StackView */,
 				2BB92078229E7905003E1974 /* Web */,
 				2B32719B2202EB8E0092C9F7 /* Home */,
@@ -377,6 +382,15 @@
 				2B61D0E3255BDDB4003E7F5E /* GYStackViewViewController.xib */,
 			);
 			path = StackView;
+			sourceTree = "<group>";
+		};
+		2B61D0E6255CDD3E003E7F5E /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				2B61D0E7255CDDBB003E7F5E /* GYAutoLayoutViewController.swift */,
+				2B61D0E8255CDDBB003E7F5E /* GYAutoLayoutViewController.xib */,
+			);
+			path = AutoLayout;
 			sourceTree = "<group>";
 		};
 		2B712E45220420FB00D2ACC7 /* CommonFuction */ = {
@@ -577,6 +591,7 @@
 				2B1CFF2C2238AA0400B48618 /* InfoPlist.strings in Resources */,
 				2B3BCE3D223248D70009FF70 /* GYGaussianBlurViewController.xib in Resources */,
 				2B3271A42202EBD60092C9F7 /* GYMineViewController.xib in Resources */,
+				2B61D0EA255CDDBB003E7F5E /* GYAutoLayoutViewController.xib in Resources */,
 				2B7597CD223BA7F700F99A92 /* GYLanguagesViewController.xib in Resources */,
 				2B3BCE43223267710009FF70 /* GYGradualNaviViewController.xib in Resources */,
 				2BD2C0182249BABD00170B1D /* GYNotificationViewController.xib in Resources */,
@@ -684,6 +699,7 @@
 				2BC1AE562238F3EB005CF9F7 /* GYLanguagesViewController.swift in Sources */,
 				2B1CFF1C22375E9C00B48618 /* GYRouter.swift in Sources */,
 				2B3271952202EB300092C9F7 /* GYRootViewController.swift in Sources */,
+				2B61D0E9255CDDBB003E7F5E /* GYAutoLayoutViewController.swift in Sources */,
 				2BC1AE5922390292005CF9F7 /* GYBundleEx.swift in Sources */,
 				2BD2C01E2249F6DE00170B1D /* GYNotificationHelper.swift in Sources */,
 				2B3271942202EB300092C9F7 /* GYRootTabBarController.swift in Sources */,

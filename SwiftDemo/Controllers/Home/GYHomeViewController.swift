@@ -23,7 +23,7 @@ class GYHomeViewController: GYRootViewController {
         navigationItem.title = "首页".localized
         
         setNaviBarItem()
-        list = [Router.gaussianBlur,Router.gradualNavi,Router.notification,Router.protocolVC,Router.webViewVC,Router.stackViewVC]
+        list = [.gaussianBlur,.gradualNavi,.notification,.protocolVC,.webViewVC,.stackViewVC,.autoLayoutVC]
         // 4.注册cell
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
     }
